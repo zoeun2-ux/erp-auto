@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ERP 자동 결재</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, 'Malgun Gothic', sans-serif;
+      background: #f0f2f8;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 20px;
+      padding: 40px;
+      width: 100%;
+      max-width: 480px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+    }
+    .logo { font-size: 28px; margin-bottom: 4px; }
+    h1 { font-size: 22px; color: #1a1a2e; margin-bottom: 4px; }
+    .subtitle { font-size: 13px; color: #999; margin-bottom: 32px; }
+    label { display: block; font-size: 12px; font-weight: 700; color: #555; margin-bottom: 6px; letter-spacing: 0.5px; text-transform: uppercase; }
+    input {
+      width: 100%; padding: 12px 16px;
+      border: 1.5px solid #e8e8e8; border-radius: 10px;
+      font-size: 15px; margin-bottom: 16px;
+      outline: none; transition: border-color 0.2s, box-shadow 0.2s;
+      background: #fafafa;
+    }
+    input:focus { border-color: #5b5ef4; box-shadow: 0 0 0 3px rgba(91,94,244,0.10); background: white; }
+    .btn-run {
+      width: 100%; padding: 15px;
+      background: linear-gradient(135deg, #5b5ef4, #7c6ff7);
+      color: white; border: none; border-radius: 10px;
+      font-size: 16px; font-weight: 700;
+      cursor: pointer; transition: opacity 0.2s, transform 0.1s;
+      letter-spacing: 0.3px;
+    }
+    .btn-run:hover { opacity: 0.92; }
+    .btn-run:active { transform: scale(0.99); }
+    .btn-run:disabled { background: #c5c6f0; cursor: not-allowed; transform: none; }
+
+    .status-bar {
+      display: none; margin-top: 24px;
+      padding: 12px 16px; border-radius: 10px;
+      background: #f8f9ff; border: 1.5px solid #e8eaff;
+      font-size: 13px; color: #5b5ef4; font-weight: 600;
+    }
+    .status-bar.show { display: flex; align-items: center; gap: 8px; }
+    .spinner {
+      width: 14px; height: 14px; border: 2px solid #c5c6f0;
+      border-top-color: #5b5ef4; border-radius: 50%;
+      animation: spin 0.8s linear infinite; flex-shrink: 0;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .log-box {
+      display: none; margin-top: 16px;
+      background: #0f1117; border-radius: 12px;
+      padding: 16px; max-height: 320px; overflow-y: auto;
+    }
+    .log-box.show { display: block; }
+    .log-line { font-family: 'Consolas', monospace; font-size: 12px; color: #8ecf8e; line-height: 1.8; white-space: pre-wrap; word-break: break-all; }
+    .log-line.error { color: #ff8080; }
+    .log-line.done { color: #ffd700; font-weight: bold; }
+    .log-line.info { color: #7ec8e3; }
+
+    .result-box {
+      display: none; margin-top: 16px; padding: 16px;
+      border-radius: 12px; background: #f6fff9; border: 1.5px solid #c3e6cb;
+    }
+    .result-box.show { display: block; }
+    .result-title { font-size: 14px; font-weight: 700; color: #2d6a4f; margin-bottom: 10px; }
+    .result-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
+    .result-item { text-align: center; padding: 10px; background: white; border-radius: 8px; border: 1px solid #e8f5e9; }
+    .result-num { font-size: 22px; font-weight: 800; color: #2d6a4f; }
+    .result-label { font-size: 11px; color: #888; margin-top: 2px; }
+
+    .divider { height: 1px; background: #f0f0f0; margin: 20px 0; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="logo">🤖</div>
+    <h1>ERP 자동 결재</h1>
+    <p class="subtitle">계정 정보를 입력하고 실행하세요</p>
+
+    <label>아이디</label>
+    <input type="text" id="username" placeholder="ERP 아이디">
+
+    <label>비밀번호</label>
+    <input type="password" id="password" placeholder="비밀번호">
+
+    <label>문서양식 <span style="font-weight:400;color:#bbb;text-transform:none">(기본값 그대로 사용 가능)</span></label>
+    <input type="text" id="formKeyword" placeholder="(신규) 지출결의서">
+
+    <button class="btn-run" id="runBtn" onclick="runAutomation()">▶ 자동화 시작</button>
+
+    <div class="status-bar" id="statusBar">
+      <div class="spinner"></div>
+      <span id="statusText">처리 중...</span>
+    </div>
+
+    <div class="log-box" id="logBox">
+      <div id="logContent"></div>
+    </div>
+
+    <div class="result-box" id="resultBox">
+      <div class="result-title">✅ 완료</div>
+      <div class="result-grid">
+        <div class="result-item">
+          <div class="result-num" id="resTotal">0</div>
+          <div class="result-label">전체</div>
+        </div>
+        <div class="result-item" style="background:#f6fff9">
+          <div class="result-num" id="resApproved" style="color:#27ae60">0</div>
+          <div class="result-label">자동승인</div>
+        </div>
+        <div class="result-item" style="background:#fff8f8">
+          <div class="result-num" id="resMismatch" style="color:#e74c3c">0</div>
+          <div class="result-label">불일치</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function runAutomation() {
+      const username = document.getElementById('username').value.trim();
+      const password = document.getElementById('password').value.trim();
+      const formKeyword = document.getElementById('formKeyword').value.trim();
+      if (!username || !password) { alert('아이디와 비밀번호를 입력하세요.'); return; }
+
+      const btn = document.getElementById('runBtn');
+      const logBox = document.getElementById('logBox');
+      const logContent = document.getElementById('logContent');
+      const statusBar = document.getElementById('statusBar');
+      const statusText = document.getElementById('statusText');
+      const resultBox = document.getElementById('resultBox');
+
+      btn.disabled = true; btn.textContent = '⏳ 실행 중...';
+      logBox.className = 'log-box show'; logContent.innerHTML = '';
+      statusBar.className = 'status-bar show';
+      resultBox.className = 'result-box';
+
+      let total = 0, approved = 0, mismatch = 0;
+
+      function addLog(text, type = '') {
+        const div = document.createElement('div');
+        div.className = 'log-line ' + type;
+        div.textContent = text;
+        logContent.appendChild(div);
+        logBox.scrollTop = logBox.scrollHeight;
+
+        // 상태바 업데이트
+        if (text.includes('[') && text.match(/^\[(\d+)\]/)) statusText.textContent = `처리 중... ${text.match(/^\[(\d+)\]/)[1]}번째 문서`;
+        if (text.includes('✅ 일치')) approved++;
+        if (text.includes('❌ 불일치')) mismatch++;
+        if (text.match(/스캔 완료: 총 (\d+)건/)) total = parseInt(text.match(/스캔 완료: 총 (\d+)건/)[1]);
+      }
+
+      fetch('/run', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username, password, formKeyword }),
+      }).then(res => {
+        const reader = res.body.getReader();
+        const decoder = new TextDecoder();
+        function read() {
+          reader.read().then(({ done, value }) => {
+            if (done) return;
+            decoder.decode(value).split('\n').forEach(line => {
+              if (!line.startsWith('data: ')) return;
+              const msg = line.replace('data: ', '');
+              if (msg === '__DONE__') {
+                btn.disabled = false; btn.textContent = '▶ 자동화 시작';
+                statusBar.className = 'status-bar';
+                document.getElementById('resTotal').textContent = total;
+                document.getElementById('resApproved').textContent = approved;
+                document.getElementById('resMismatch').textContent = mismatch;
+                resultBox.className = 'result-box show';
+              } else if (msg.includes('오류') || msg.includes('❌')) addLog(msg, 'error');
+              else if (msg.includes('완료') || msg.includes('✅')) addLog(msg, 'done');
+              else if (msg.includes('[') || msg.includes('=')) addLog(msg, 'info');
+              else if (msg.trim()) addLog(msg);
+            });
+            read();
+          });
+        }
+        read();
+      }).catch(e => {
+        addLog('서버 연결 오류: ' + e.message, 'error');
+        btn.disabled = false; btn.textContent = '▶ 자동화 시작';
+        statusBar.className = 'status-bar';
+      });
+    }
+
+    // 엔터키로 실행
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Enter' && !document.getElementById('runBtn').disabled) runAutomation();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,298 @@
+[
+  {
+    "idx": 1,
+    "rowText": "05-14 (목) 18:59 [해외영업T] 뉴욕 팬시푸드 전시회 추가 비품 (냉동고, 24시간 전력) 구매의 건 [해외영업T] 뉴욕 팬시푸드 전시회 추가 비품 (냉동고, 24시간 전력) 구매의 건 4 2 (신규) 외",
+    "docNum": "해외영업T-2605-004",
+    "title": "[해외영업T] 뉴욕 팬시푸드 전시회 추가 비품 (냉동고, 24시간 전력) 구매의 건",
+    "usageTotal": 2224709,
+    "attachTotal": null,
+    "match": false,
+    "diff": null
+  },
+  {
+    "idx": 2,
+    "rowText": "05-14 (목) 13:19 물류_및_배송관련 / 포장비 / 태림포장 물류_및_배송관련 / 포장비 / 태림포장 2 (신규) 지출결의서(물류T) 물류T 냉동P-2605-025 김경민 파트장 통합물류실 물류T 냉동P 진",
+    "docNum": "물류T 냉동P-2605-025",
+    "title": "물류_및_배송관련 / 포장비 / 태림포장",
+    "usageTotal": 48701448,
+    "attachTotal": null,
+    "match": false,
+    "diff": null
+  },
+  {
+    "idx": 3,
+    "rowText": "05-14 (목) 13:19 물류_및_배송관련 / 부자재 / 태성산업 물류_및_배송관련 / 부자재 / 태성산업 2 (신규) 지출결의서(물류T) 물류T 냉동P-2605-022 남동완 팀원 통합물류실 물류T 냉동P 진행",
+    "docNum": "물류T 냉동P-2605-022",
+    "title": "물류_및_배송관련 / 부자재 / 태성산업",
+    "usageTotal": 29755572,
+    "attachTotal": null,
+    "match": false,
+    "diff": null
+  },
+  {
+    "idx": 4,
+    "rowText": "05-14 (목) 13:00 물류_및_배송관련 / 시설장비 / 에이원방재 3 (신규) 지출결의서(물류T) 물류T 냉동P-2605-024 김경민 파트장 통합물류실 물류T 냉동P 진행 (조은이 팀원)",
+    "docNum": "물류T 냉동P-2605-024",
+    "title": "물류_및_배송관련 / 시설장비 / 에이원방재",
+    "usageTotal": 1012000,
+    "attachTotal": 920000,
+    "match": false,
+    "diff": 92000
+  },
+  {
+    "idx": 5,
+    "rowText": "05-13 (수) 11:29 부자재 샘플/물류비-DHL 2 (신규) 지출결의서(구매T) 구매T-2605-078 김서령 팀원 비즈니스G 구매T 진행 (조은이 팀원)",
+    "docNum": "구매T-2605-078",
+    "title": "부자재 샘플/물류비-DHL",
+    "usageTotal": 206490,
+    "attachTotal": 207600,
+    "match": false,
+    "diff": 1110
+  },
+  {
+    "idx": 6,
+    "rowText": "05-12 (화) 14:43 26년 4월 물류 및_배송관련 / 삼자물류비 / 삼자물류비_BGF로지스(B2B) 2 (신규) 지출결의서(SCMT) SCMT SCMP-2605-022 이재용 파트장 SCMT SCMT SCM",
+    "docNum": "SCMT SCMP-2605-022",
+    "title": "26년 4월 물류 및_배송관련 / 삼자물류비 / 삼자물류비_BGF로지스(B2B)",
+    "usageTotal": 27634992,
+    "attachTotal": null,
+    "match": false,
+    "diff": null
+  },
+  {
+    "idx": 7,
+    "rowText": "05-12 (화) 14:43 26년 4월 물류 및_배송관련 / 삼자물류비 / 삼자물류비_BGF로지스(CVS) 2 (신규) 지출결의서(SCMT) SCMT SCMP-2605-021 이재용 파트장 SCMT SCMT SCM",
+    "docNum": "SCMT SCMP-2605-021",
+    "title": "26년 4월 물류 및_배송관련 / 삼자물류비 / 삼자물류비_BGF로지스(CVS)",
+    "usageTotal": 124166702,
+    "attachTotal": null,
+    "match": false,
+    "diff": null
+  },
+  {
+    "idx": 8,
+    "rowText": "05-12 (화) 14:43 26년 4월 물류 및_배송관련 / 삼자물류비 / 삼자물류비_BGF로지스(상온) 2 (신규) 지출결의서(SCMT) SCMT SCMP-2605-023 이재용 파트장 SCMT SCMT SCMP",
+    "docNum": "SCMT SCMP-2605-023",
+    "title": "26년 4월 물류 및_배송관련 / 삼자물류비 / 삼자물류비_BGF로지스(상온)",
+    "usageTotal": 24812590,
+    "attachTotal": null,
+    "match": false,
+    "diff": null
+  },
+  {
+    "idx": 9,
+    "rowText": "05-11 (월) 18:06 원자재/선급금_삼부 2 1 (신규) 지출결의서(구매T) 구매T-2605-075 김현정 팀원 비즈니스G 구매T 진행 (조은이 팀원)",
+    "docNum": "구매T-2605-075",
+    "title": "원자재/선급금_삼부",
+    "usageTotal": 264660,
+    "attachTotal": 237600,
+    "match": false,
+    "diff": 27060
+  },
+  {
+    "idx": 10,
+    "rowText": "05-11 (월) 10:00 26년 4월_공임비 / 공임비_자연과사람들 2 (신규) 지출결의서(SCMT) SCMT SCMP-2605-010 김명준 팀원 SCMT SCMT SCMP 진행 (조은이 팀원)",
+    "docNum": "SCMT SCMP-2605-010",
+    "title": "26년 4월_공임비 / 공임비_자연과사람들",
+    "usageTotal": 13841150,
+    "attachTotal": null,
+    "match": false,
+    "diff": null
+  },
+  {
+    "idx": 11,
+    "rowText": "05-11 (월) 10:00 26년 4월 물류_및_배송관련 / 외주가공비 / 삼자물류비_한국컨테이너풀(주) 7 (신규) 지출결의서(SCMT) SCMT SCMP-2605-017 최영우 팀원 SCMT SCMT SCMP ",
+    "docNum": "SCMT SCMP-2605-017",
+    "title": "26년 4월 물류_및_배송관련 / 외주가공비 / 삼자물류비_한국컨테이너풀(주)",
+    "usageTotal": 10774394,
+    "attachTotal": 8870074,
+    "match": false,
+    "diff": 1904320
+  },
+  {
+    "idx": 12,
+    "rowText": "05-11 (월) 10:00 4월 참조은 폐기 원부자재 금액 상신의 件 3 1 (신규) 지출결의서(SCMT) SCMT SCMP-2605-013 최영우 팀원 SCMT SCMT SCMP 진행 (조은이 팀원)",
+    "docNum": "SCMT SCMP-2605-013",
+    "title": "4월 참조은 폐기 원부자재 금액 상신의 件",
+    "usageTotal": 3747806,
+    "attachTotal": null,
+    "match": false,
+    "diff": null
+  },
+  {
+    "idx": 13,
+    "rowText": "05-11 (월) 10:00 26년 4월_생산 / 공임비 / 공임비_연세유업 2 (신규) 지출결의서(SCMT) SCMT SCMP-2605-019 이재용 파트장 SCMT SCMT SCMP 진행 (조은이 팀원)",
+    "docNum": "SCMT SCMP-2605-019",
+    "title": "26년 4월_생산 / 공임비 / 공임비_연세유업",
+    "usageTotal": 27153192,
+    "attachTotal": 324684720,
+    "match": false,
+    "diff": 297531528
+  },
+  {
+    "idx": 14,
+    "rowText": "05-08 (금) 18:45 물류_및_배송관련 / 지게차 렌탈비 / 동명상사 2 (신규) 지출결의서(물류T) 물류T 냉동P-2605-011 남동완 팀원 통합물류실 물류T 냉동P 진행 (조은이 팀원)",
+    "docNum": "물류T 냉동P-2605-011",
+    "title": "물류_및_배송관련 / 지게차 렌탈비 / 동명상사",
+    "usageTotal": 473000,
+    "attachTotal": 473000,
+    "match": true,
+    "diff": 0
+  },
+  {
+    "idx": 15,
+    "rowText": "05-08 (금) 18:45 물류_및_배송관련 / 아르바이트식대 / 밥을그리다 2 (신규) 지출결의서(물류T) 물류T 냉동P-2605-010 남동완 팀원 통합물류실 물류T 냉동P 진행 (조은이 팀원)",
+    "docNum": "물류T 냉동P-2605-010",
+    "title": "물류_및_배송관련 / 아르바이트식대 / 밥을그리다",
+    "usageTotal": 2192000,
+    "attachTotal": null,
+    "match": false,
+    "diff": null
+  },
+  {
+    "idx": 16,
+    "rowText": "05-08 (금) 15:04 생산/부자재-동원시스템즈(아산공장) 3 (신규) 지출결의서(구매T) 구매T-2605-070 윤도현 팀원 비즈니스G 구매T 진행 (조은이 팀원)",
+    "docNum": "구매T-2605-070",
+    "title": "생산/부자재-동원시스템즈(아산공장)",
+    "usageTotal": 21430200,
+    "attachTotal": 432000,
+    "match": false,
+    "diff": 20998200
+  },
+  {
+    "idx": 17,
+    "rowText": "05-08 (금) 12:21 생산/원자재-빅솔 2 (신규) 지출결의서(구매T) 구매T-2605-067 윤도현 팀원 비즈니스G 구매T 진행 (조은이 팀원)",
+    "docNum": "구매T-2605-067",
+    "title": "생산/원자재-빅솔",
+    "usageTotal": 138039000,
+    "attachTotal": null,
+    "match": false,
+    "diff": null
+  },
+  {
+    "idx": 18,
+    "rowText": "05-07 (목) 21:01 생산/원재료-롯데웰푸드 2 (신규) 지출결의서(구매T) 구매T-2605-061 김현정 팀원 비즈니스G 구매T 진행 (조은이 팀원)",
+    "docNum": "구매T-2605-061",
+    "title": "생산/원재료-롯데웰푸드",
+    "usageTotal": 25645950,
+    "attachTotal": null,
+    "match": false,
+    "diff": null
+  },
+  {
+    "idx": 19,
+    "rowText": "05-07 (목) 21:01 생산/원자재-담양제과 2 1 (신규) 지출결의서(구매T) 구매T-2605-062 김현정 팀원 비즈니스G 구매T 진행 (조은이 팀원)",
+    "docNum": "구매T-2605-062",
+    "title": "생산/원자재-담양제과",
+    "usageTotal": 16650533,
+    "attachTotal": null,
+    "match": false,
+    "diff": null
+  },
+  {
+    "idx": 20,
+    "rowText": "05-07 (목) 15:42 생산/원자재-제이더스화학 2 (신규) 지출결의서(구매T) 구매T-2605-055 윤도현 팀원 비즈니스G 구매T 진행 (조은이 팀원)",
+    "docNum": "구매T-2605-055",
+    "title": "생산/원자재-제이더스화학",
+    "usageTotal": 72503475,
+    "attachTotal": 72503475,
+    "match": true,
+    "diff": 0
+  },
+  {
+    "idx": 21,
+    "rowText": "05-07 (목) 13:52 생산/원자재-제이비 2 (신규) 지출결의서(구매T) 구매T-2605-052 김서령 팀원 비즈니스G 구매T 진행 (조은이 팀원)",
+    "docNum": "구매T-2605-052",
+    "title": "생산/원자재-제이비",
+    "usageTotal": 51145034,
+    "attachTotal": 92329034,
+    "match": false,
+    "diff": 41184000
+  },
+  {
+    "idx": 22,
+    "rowText": "05-07 (목) 13:52 생산/원자재-유큐에프코리아 2 (신규) 지출결의서(구매T) 구매T-2605-051 김서령 팀원 비즈니스G 구매T 진행 (조은이 팀원)",
+    "docNum": "구매T-2605-051",
+    "title": "생산/원자재-유큐에프코리아",
+    "usageTotal": 140360000,
+    "attachTotal": null,
+    "match": false,
+    "diff": null
+  },
+  {
+    "idx": 23,
+    "rowText": "05-07 (목) 13:31 생산/부자재-태림포장 3 1 (신규) 지출결의서(구매T) 구매T-2605-050 윤도현 팀원 비즈니스G 구매T 진행 (조은이 팀원)",
+    "docNum": "구매T-2605-050",
+    "title": "생산/부자재-태림포장",
+    "usageTotal": 50014820,
+    "attachTotal": null,
+    "match": false,
+    "diff": null
+  },
+  {
+    "idx": 24,
+    "rowText": "05-07 (목) 12:26 생산/원자재-아로마라인 2 (신규) 지출결의서(구매T) 구매T-2605-049 윤도현 팀원 비즈니스G 구매T 진행 (조은이 팀원)",
+    "docNum": "구매T-2605-049",
+    "title": "생산/원자재-아로마라인",
+    "usageTotal": 2948000,
+    "attachTotal": 2948000,
+    "match": true,
+    "diff": 0
+  },
+  {
+    "idx": 25,
+    "rowText": "05-07 (목) 12:14 26년_4월_생산,공임비/훼미리 2 (신규) 지출결의서(SCMT) SCMT SCMP-2605-007 김대헌 팀원 SCMT SCMT SCMP 진행 (조은이 팀원)",
+    "docNum": "SCMT SCMP-2605-007",
+    "title": "26년_4월_생산,공임비/훼미리",
+    "usageTotal": 375728060,
+    "attachTotal": 375728060,
+    "match": true,
+    "diff": 0
+  },
+  {
+    "idx": 26,
+    "rowText": "05-07 (목) 12:14 26년 4월_생산 동그린 공임비 2 (신규) 지출결의서(SCMT) SCMT SCMP-2605-005 이준서 팀원 SCMT SCMT SCMP 진행 (조은이 팀원)",
+    "docNum": "SCMT SCMP-2605-005",
+    "title": "26년 4월_생산 동그린 공임비",
+    "usageTotal": 56534632,
+    "attachTotal": 56534632,
+    "match": true,
+    "diff": 0
+  },
+  {
+    "idx": 27,
+    "rowText": "05-07 (목) 12:14 26년 4월_생산 / 공임비 / 공임비_제이앤이 2 (신규) 지출결의서(SCMT) SCMT SCMP-2605-008 이재용 파트장 SCMT SCMT SCMP 진행 (조은이 팀원)",
+    "docNum": "SCMT SCMP-2605-008",
+    "title": "26년 4월_생산 / 공임비 / 공임비_제이앤이",
+    "usageTotal": 709001700,
+    "attachTotal": null,
+    "match": false,
+    "diff": null
+  },
+  {
+    "idx": 28,
+    "rowText": "05-07 (목) 12:14 생산/원자재-삼우티디 2 (신규) 지출결의서(구매T) 구매T-2605-044 윤도현 팀원 비즈니스G 구매T 진행 (조은이 팀원)",
+    "docNum": "구매T-2605-044",
+    "title": "생산/원자재-삼우티디",
+    "usageTotal": 13662000,
+    "attachTotal": 194400,
+    "match": false,
+    "diff": 13467600
+  },
+  {
+    "idx": 29,
+    "rowText": "05-07 (목) 12:14 생산/원자재-삼영식품원료공업 2 (신규) 지출결의서(구매T) 구매T-2605-041 윤도현 팀원 비즈니스G 구매T 진행 (조은이 팀원)",
+    "docNum": "구매T-2605-041",
+    "title": "생산/원자재-삼영식품원료공업",
+    "usageTotal": null,
+    "attachTotal": null
+  },
+  {
+    "idx": 30,
+    "rowText": "05-07 (목) 12:09 생산/원자재-대천향료 2 (신규) 지출결의서(구매T) 구매T-2605-042 윤도현 팀원 비즈니스G 구매T 진행 (조은이 팀원)",
+    "docNum": "구매T-2605-042",
+    "title": "생산/원자재-대천향료",
+    "usageTotal": null,
+    "attachTotal": null
+  }
+]
